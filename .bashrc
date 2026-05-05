@@ -1,3 +1,7 @@
+
+# Kiro CLI pre block. Keep at the top of this file.
+[[ -f "${HOME}/.local/share/kiro-cli/shell/bashrc.pre.bash" ]] && builtin source "${HOME}/.local/share/kiro-cli/shell/bashrc.pre.bash"
+
 #
 # ~/.bashrc
 #
@@ -86,3 +90,17 @@ PS1='[\u@\h \W]\$ '
 
 # dotfiles/config
 alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# general exports
+export EDITOR="vim"
+export VISUAL="vim"
+
+#Add ~/.local/bin to PATH (for kiro-cli)
+export PATH="$PATH:$HOME/.local/bin"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+
+# Kiro CLI post block. Keep at the bottom of this file.
+[[ -f "${HOME}/.local/share/kiro-cli/shell/bashrc.post.bash" ]] && builtin source "${HOME}/.local/share/kiro-cli/shell/bashrc.post.bash"
