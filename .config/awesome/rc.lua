@@ -50,6 +50,10 @@ end
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
+-- window spacing (by speakingcode)
+beautiful.useless_gap = 10
+beautiful.gap_single_client = true
+
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
 editor = os.getenv("EDITOR") or "vim"
@@ -457,7 +461,8 @@ awful.rules.rules = {
                      buttons = clientbuttons,
                      screen = awful.screen.preferred,
                      placement = awful.placement.no_overlap+awful.placement.no_offscreen
-     }
+     },
+     callback = awful.titlebar.hide -- Removes titlebars on all windows
     },
 
     -- Floating clients.
