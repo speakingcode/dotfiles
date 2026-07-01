@@ -21,6 +21,9 @@ require("awful.hotkeys_popup.keys")
 -- start picom compositor for transparency, etc
 awful.spawn.with_shell("picom -b")
 
+-- start polkit
+awful.spawn.with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
