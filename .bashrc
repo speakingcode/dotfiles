@@ -91,16 +91,30 @@ PS1='[\u@\h \W]\$ '
 # dotfiles/config
 alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-# general exports
+# bash Configuration
+export HISTSIZE=100000
+export HISTFILESIZE=100000
+
+# append history immediately instead of overwriting on exit
+shopt -s histappend
+
+# save and reload history after every command prompt
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+# set timestamp format (YYYY-MM-DD HH:MM:SS)
+export HISTTIMEFORMAT="%F %T "
+
+# General Exports
+
+## App-selection
 export EDITOR="vim"
 export VISUAL="vim"
 
-#Add ~/.local/bin to PATH (for kiro-cli)
+# Add ~/.local/bin to PATH (for kiro-cli)
 export PATH="$PATH:$HOME/.local/bin"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-
 
 # Kiro CLI post block. Keep at the bottom of this file.
 [[ -f "${HOME}/.local/share/kiro-cli/shell/bashrc.post.bash" ]] && builtin source "${HOME}/.local/share/kiro-cli/shell/bashrc.post.bash"
