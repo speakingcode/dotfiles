@@ -104,6 +104,11 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 # set timestamp format (YYYY-MM-DD HH:MM:SS)
 export HISTTIMEFORMAT="%F %T "
 
+# set ANDROID_HOME and add tool dirs to path
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 # General Exports
 
 ## App-selection
