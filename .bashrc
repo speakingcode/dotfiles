@@ -1,4 +1,3 @@
-
 # Kiro CLI pre block. Keep at the top of this file.
 [[ -f "${HOME}/.local/share/kiro-cli/shell/bashrc.pre.bash" ]] && builtin source "${HOME}/.local/share/kiro-cli/shell/bashrc.pre.bash"
 
@@ -114,6 +113,9 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 ## App-selection
 export EDITOR="vim"
 export VISUAL="vim"
+
+# Edge-compatible browser for app debugging
+export EDGE_PATH=chromium
 
 # Add ~/.local/bin to PATH (for kiro-cli)
 export PATH="$PATH:$HOME/.local/bin"
