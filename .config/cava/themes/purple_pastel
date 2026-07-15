@@ -1,23 +1,25 @@
 [color]
-# Enable multi-color gradients
+# Keep background commented out or change hex to adjust transparency
+; background = '#001e26'
+
+# --- VERTICAL LIGHTENING SPECTRUM ---
+# These colors define the vertical peak highlights. 
+# Green (Color 4) is now a significantly brighter, pale pastel mint.
 gradient = 1
+gradient_color_1 = '#a183d6' # Light Pastel Lilac
+gradient_color_2 = '#6085db' # Light Pastel Ice Blue
+gradient_color_3 = '#59c787' # Light Pastel Mint Green
+gradient_color_4 = '#aefadc' # Brighter, Pale Pastel Mint
 
-# 1 = Horizontal gradient across bars (Left to Right)
-# 0 = Vertical gradient within the bars (Bottom to Top)
-# Set to 1 so Purple spans the left, Blue the middle, and Green the right.
-gradient_count = 6
+# --- HORIZONTAL SPECTRUM ---
+# Purple is placed in slots 1 and 2 to stretch it further to the right.
+# Green (Color 4) is lightened to a softer, brighter dark sage.
+horizontal_gradient = 1
+horizontal_gradient_color_1 = '#4d3a6d' # Left Side: Deep Dark Purple
+horizontal_gradient_color_2 = '#4d3a6d' # Left-Mid: Extended Deep Dark Purple
+horizontal_gradient_color_3 = '#1a2e5c' # Middle Bars: Deep Dark Blue
+horizontal_gradient_color_4 = '#245235' # Right Side: Brighter Dark Green
 
-# Left Side: Pastel Purple base shifting to a slightly lighter pastel purple
-gradient_color_1 = '#5c4d7d'
-gradient_color_2 = '#8d75b3'
-
-# Middle Bars: Rich Dark Blue base shifting to a lighter dusty blue 
-gradient_color_3 = '#2a3d66'
-gradient_color_4 = '#516f9e'
-
-# Right Side: Deep Dark Green base shifting to a lighter minty pastel green
-gradient_color_5 = '#1c3d2e'
-gradient_color_6 = '#497c5f'
-
-# Optional: Deep dark background to compliment the pastel tones
-; background = '#121317'
+# --- THE BLEND MECHANISM ---
+# Blends the bottom base colors into the lighter peak variations.
+blend_direction = 'up'

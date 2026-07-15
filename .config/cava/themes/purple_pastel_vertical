@@ -1,0 +1,23 @@
+[color]
+# Enable multi-color gradients
+gradient = 1
+
+# 1 = Horizontal gradient across bars (Left to Right)
+# 0 = Vertical gradient within the bars (Bottom to Top)
+# Set to 1 so Purple spans the left, Blue the middle, and Green the right.
+gradient_count = 6
+
+# Left Side: Pastel Purple base shifting to a slightly lighter pastel purple
+gradient_color_1 = '#5c4d7d'
+gradient_color_2 = '#8d75b3'
+
+# Middle Bars: Rich Dark Blue base shifting to a lighter dusty blue 
+gradient_color_3 = '#2a3d66'
+gradient_color_4 = '#516f9e'
+
+# Right Side: Deep Dark Green base shifting to a lighter minty pastel green
+gradient_color_5 = '#1c3d2e'
+gradient_color_6 = '#497c5f'
+
+# Optional: Deep dark background to compliment the pastel tones
+; background = '#121317'
